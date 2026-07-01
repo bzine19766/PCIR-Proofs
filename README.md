@@ -113,9 +113,7 @@ Both authors contributed substantially to the resulting research and share respo
 
 - Isabelle2025
 
-(or the Isabelle version used in the paper)
 
----
 
 # Citation
 
