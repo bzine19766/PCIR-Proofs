@@ -1,8 +1,8 @@
-# PCIR-Proofs
+# PCIR_Proofs
 
 Machine-checked Isabelle/HOL proofs for the PCIR (Parallel Coloring Iterative Refinement) algorithm for exact graph coloring.
 
-# PCIR-Proofs
+# PCIR_Proofs
 
 Machine-checked Isabelle/HOL proofs accompanying the paper
 
@@ -43,8 +43,8 @@ The semantics is specified as a labelled transition system and verified entirely
 
 ```bash
 # 1. Unzip the archive
-unzip PCIR-Proofs.zip
-cd PCIR-Proofs
+unzip PCIR_Proofs.zip
+cd PCIR_Proofs
 
 # 2. Build the whole session from scratch (recommended for first run)
 isabelle build -c -v -D . MIS_Cover
@@ -87,7 +87,7 @@ All proofs are fully mechanized in Isabelle/HOL.
 The development is organised as a single Isabelle/HOL session, `MIS_Cover`, whose root theory file (`ROOT`) lists six independent theory modules. The dependency order is linear: each theory imports the previous one, so the whole session builds from scratch in one pass.
 
 ```
-PCIR-Proofs/
+PCIR_Proofs/
 ├── ROOT                              # Isabelle session root (declares session MIS_Cover)
 ├── MIS_Cover.thy                     # Session entry point (imports the six theories)
 ├── MIS_Cover_Semantics.thy           # Graph, config, transitions, invariants, ranking
@@ -153,11 +153,11 @@ You should see the version string (e.g. `Isabelle2025-2`).
 
 ## Step 1 — Obtain the archive
 
-Download `PCIR-Proofs.zip` from the repository and unzip it:
+Download `PCIR_Proofs.zip` from the repository and unzip it:
 
 ```bash
-unzip PCIR-Proofs.zip
-cd PCIR-Proofs
+unzip PCIR_Proofs.zip
+cd PCIR_Proofs
 ```
 
 After unzipping, the directory must contain the `ROOT` file and the six `.thy` files listed in the *Repository Structure* section above.
@@ -196,9 +196,9 @@ MIS_Paw: ...
 Finished MIS_Cover (0:00:37 elapsed time, 0:01:34 cpu time, ...)
 ```
 
-The exact timings depend on your machine; the paper reports about **37 seconds** for the `MIS_Cover` session on an Intel I5  with Isabelle2025-2.
-<img width="1366" height="768" alt="run" src="https://github.com/user-attachments/assets/3d10d248-4ee8-4568-b1fb-e391d954ec6b" />
+The exact timings depend on your machine; the paper reports about **37 seconds** for the `MIS_Cover` session on an Intel I5 with Isabelle2025-2.
 
+<img width="1366" height="768" alt="run" src="https://github.com/user-attachments/assets/3d10d248-4ee8-4568-b1fb-e391d954ec6b" />
 
 ## Step 3 — Build without cleaning (incremental)
 
@@ -246,7 +246,7 @@ rm -rf output/
 
 | Symptom | Cause | Fix |
 |---|---|---|
-| `Bad session directory` | You ran `isabelle build` from outside the directory containing `ROOT`. | `cd` into the unzipped `PCIR-Proofs` directory first. |
+| `Bad session directory` | You ran `isabelle build` from outside the directory containing `ROOT`. | `cd` into the unzipped `PCIR_Proofs` directory first. |
 | `Unknown session MIS_Cover` | The `ROOT` file is missing or misnamed. | Ensure `ROOT` (no extension) is present in the current directory. |
 | Build hangs on `HOL` | First-time compilation of the `HOL` image. | Wait — this is normal on a first run. |
 | `Cannot find theory` | A theory file is missing or renamed. | Check that all six `.thy` files are present alongside `ROOT`. |
