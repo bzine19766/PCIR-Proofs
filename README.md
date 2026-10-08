@@ -197,6 +197,8 @@ Finished MIS_Cover (0:00:37 elapsed time, 0:01:34 cpu time, ...)
 ```
 
 The exact timings depend on your machine; the paper reports about **37 seconds** for the `MIS_Cover` session on an Intel I5  with Isabelle2025-2.
+<img width="1366" height="768" alt="run" src="https://github.com/user-attachments/assets/3d10d248-4ee8-4568-b1fb-e391d954ec6b" />
+
 
 ## Step 3 — Build without cleaning (incremental)
 
