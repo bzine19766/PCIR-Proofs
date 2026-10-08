@@ -196,7 +196,7 @@ MIS_Paw: ...
 Finished MIS_Cover (0:00:37 elapsed time, 0:01:34 cpu time, ...)
 ```
 
-The exact timings depend on your machine; the paper reports about **37 seconds** for the `MIS_Cover` session on an Intel Xeon with Isabelle2025-2.
+The exact timings depend on your machine; the paper reports about **37 seconds** for the `MIS_Cover` session on an Intel I5  with Isabelle2025-2.
 
 ## Step 3 — Build without cleaning (incremental)
 
