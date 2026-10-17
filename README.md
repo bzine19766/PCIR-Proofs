@@ -1,9 +1,5 @@
 # PCIR_Proofs
 
-Machine-checked Isabelle/HOL proofs for the PCIR (Parallel Coloring Iterative Refinement) algorithm for exact graph coloring.
-
-# PCIR_Proofs
-
 Machine-checked Isabelle/HOL proofs accompanying the paper
 
 > **A Configuration-State Semantics for MIS-Cover Graph Coloring**
@@ -20,7 +16,7 @@ University of York, United Kingdom
 
 ## Overview
 
-This repository contains the complete Isabelle/HOL formalization of the operational semantics presented in the paper *A Configuration-State Semantics for MIS-Cover Graph Coloring*.
+This repository contains the complete Isabelle/HOL formalization of the operational semantics presented in the paper *A Configuration-State Semantics for MIS-Cover Graph Coloring*, a semantics for PCIR (Parallel Coloring Iterative Refinement), an exact graph coloring algorithm.
 
 The development formalizes the semantics of MIS-cover graph coloring using configuration states
 
@@ -32,10 +28,10 @@ where
 
 - **P** is the residual vertex pool,
 - **R** is the list of committed maximal independent sets (color classes),
-- **I** is the current maximal independent set under construction,
+- **I** is the current independent set under construction,
 - **C** is the candidate workspace.
 
-The semantics is specified as a labelled transition system and verified entirely in Isabelle/HOL.
+The semantics is specified as a labelled transition system (ADD and COMMIT steps) and verified entirely in Isabelle/HOL.
 
 ---
 
@@ -56,7 +52,7 @@ isabelle jedit -d . MIS_Cover_Semantics.thy
 If the build succeeds you will see, at the end of the log:
 
 ```
-Finished MIS_Cover (0:00:37 elapsed time, 0:01:34 cpu time, ...)
+Finished MIS_Cover (0:00:33 elapsed time, ...)
 ```
 
 ---
@@ -68,35 +64,65 @@ The repository contains machine-checked proofs of:
 - Operational transition semantics
 - Configuration well-formedness
 - Structural invariants
-- Reachability
-- Ranking function
-- Transition preservation
+- Ranking function and universal termination
+- Finiteness of the set of reachable configurations
 - Uniqueness of predecessors
 - Rooted-tree property of the configuration graph
 - Unique path property
+- Reachability as a partial order; disjoint sibling subtrees
 - Soundness
-- Completeness
-- Correctness of the generated graph coloring
+- Completeness (existential and for every proper coloring)
+- Optimality of exhaustive search (minimum terminal size equals the chromatic number)
+- **Structural characterization of the reachable configurations (RMIS histories)**
+- **Exact cardinality of the reachable configuration set**
+- A worked example (the Paw graph) tied to the mechanised semantics
 
-All proofs are fully mechanized in Isabelle/HOL.
+All proofs are fully mechanized in Isabelle/HOL, with no `sorry`, no `oops` and no added axioms.
+
+### Reachability characterization (`MIS_Reachability.thy`)
+
+An *RMIS history* is a list of non-empty maximal independent sets, each maximal in the pool left over by the previous ones. Writing `pool R = V − ⋃(set R)`, the theory proves:
+
+| Theorem | Statement |
+|---|---|
+| `reachable_characterisation` | `ReachG = reach_form`, i.e. a configuration is reachable **iff** it equals `(pool R, R, I, candidate_set (pool R) I)` for some RMIS history `R` and independent `I ⊆ pool R` |
+| `reachable_iff_rmis` | For a well-formed configuration `(P,R,I,C)`: reachable ⟺ `R` is an RMIS history |
+| `exact_cardinality` | `card ReachG = Σ_{R ∈ RMIS} card (independent subsets of pool R)` |
+
+Supporting lemmas include `add_path_to_indep` (every independent subset of a pool is reached by its canonical ADD path), `phase_root_reachable` (every RMIS history has a reachable phase-root configuration) and `rmis_preserved_step` (transitions preserve the RMIS property).
 
 ---
 
 # Repository Structure
 
-The development is organised as a single Isabelle/HOL session, `MIS_Cover`, whose root theory file (`ROOT`) lists six independent theory modules. The dependency order is linear: each theory imports the previous one, so the whole session builds from scratch in one pass.
+The development is a single Isabelle/HOL session, `MIS_Cover`, declared in `ROOT`, which lists seven theory modules.
 
 ```
 PCIR_Proofs/
 ├── ROOT                              # Isabelle session root (declares session MIS_Cover)
-├── MIS_Cover.thy                     # Session entry point (imports the six theories)
 ├── MIS_Cover_Semantics.thy           # Graph, config, transitions, invariants, ranking
 ├── MIS_Commit_Bijection.thy          # Canonical ADD paths; MIS ↔ commit-ready bijection
 ├── MIS_Soundness_Completeness.thy    # Soundness (terminal ⟹ coloring) and completeness
 ├── MIS_Universal.thy                 # Termination, finiteness, optimality, universal completeness
 ├── MIS_Structure.thy                 # Unique predecessor, rooted tree, partial order, self-containment
+├── MIS_Reachability.thy              # RMIS characterization of ReachG; exact cardinality
 ├── MIS_Paw.thy                       # Paw Graph example (37 states, 6 terminals, 2 dead ends)
 └── README.md                         # This file
+```
+
+The contents of `ROOT`:
+
+```
+session MIS_Cover = "HOL-Library" +
+  options [timeout = 600]
+  theories
+    MIS_Cover_Semantics
+    MIS_Commit_Bijection
+    MIS_Soundness_Completeness
+    MIS_Universal
+    MIS_Structure
+    MIS_Reachability
+    MIS_Paw
 ```
 
 ### Theory dependency graph
@@ -116,11 +142,12 @@ MIS_Universal
         ▼
 MIS_Structure
         │
-        ▼
-MIS_Paw
+        ├──────────────┐
+        ▼              ▼
+MIS_Reachability   MIS_Paw
 ```
 
-Each arrow denotes an `imports` dependency. Because the order is linear, no theory can be built before its predecessor.
+Each arrow denotes an `imports` dependency. The first five theories form a chain; `MIS_Reachability` and `MIS_Paw` both build directly on `MIS_Structure` and are independent of each other.
 
 ### Module summary
 
@@ -131,7 +158,8 @@ Each arrow denotes an `imports` dependency. Because the order is linear, no theo
 | `MIS_Soundness_Completeness.thy` | `is_valid_coloring`, `chromatic_num`, `is_terminal`; bridging lemmas `index_disjoint_distinct`, `index_disjoint_set_disjoint`; coloring manipulation lemmas `valid_coloring_snoc_split`, `valid_coloring_snoc`, `valid_coloring_remove`, `valid_coloring_exists`; chromatic-number lemmas; `independent_set_extension`; `lemma_8_1_MIS_chromatic_recurrence`; `theorem_8_1_Soundness`; `theorem_8_2_Residual_Completeness`; `corollary_8_1_Global_Completeness`. |
 | `MIS_Universal.thy` | `rsize`, `is_dead_end`; `step_enabled`, `terminal_stuck`, `dead_end_stuck`, `stuck_terminal_or_dead_end`; `universal_termination`; `lenbound`, `lenbound_step`, `finite_ReachG`; `terminal_sizes`, `universal_lower_bound`, `optimality_exhaustive`; `commit_phase`, `completeness_colorings_aux`, `completeness_for_colorings`, `global_completeness_for_colorings`. |
 | `MIS_Structure.thy` | `step_unfold`; `add_pred_unique`, `commit_pred_unique`, `step_pred_unique`, `unique_predecessor`; inductive `path`, `path_unique_aux`, `unique_path`, `acyclic_reach`, `rooted_tree`; `partial_order_reach`, `least_element`, `root_minimal`, `unique_minimal`; `ancestors_comparable`, `sibling_not_below`, `disjoint_subtrees`; `enabled_iff`, `self_containment`, `finite_branching`. |
-| `MIS_Paw.thy` | Concrete instantiation of the semantics on the Paw Graph; verification of the counts 37 reachable configurations, 36 transitions, 6 terminals, 2 dead ends, chromatic number 3 (`Paw_terminal_count`, `Paw_chromatic`). |
+| `MIS_Reachability.thy` | `pool`; inductive `rmis` (RMIS histories); `reach_form`; `add_path_to_indep`, `phase_root_reachable`, `rmis_preserved_step`, `rmis_invariant`, `reachable_has_rmis`; theorems `reachable_characterisation`, `reachable_iff_rmis`; `rmis_sequences`, `independent_subsets`, `pair_space`, `decode_pair`; `finite_rmis_sequences`, `decode_pair_inj`, `decode_pair_image`; theorem `exact_cardinality`. |
+| `MIS_Paw.thy` | Concrete instantiation of the semantics on the Paw Graph; verification of the counts 37 reachable configurations, 36 transitions, 6 terminals, 2 dead ends, 15 commit-ready configurations, chromatic number 3 (`Paw_card_ReachG`, `Paw_terminal_count`, `Paw_chromatic`, `Paw_summary`). |
 
 ---
 
@@ -160,7 +188,7 @@ unzip PCIR_Proofs.zip
 cd PCIR_Proofs
 ```
 
-After unzipping, the directory must contain the `ROOT` file and the six `.thy` files listed in the *Repository Structure* section above.
+After unzipping, the directory must contain the `ROOT` file and the seven `.thy` files listed in the *Repository Structure* section above.
 
 ## Step 2 — Build from the root
 
@@ -184,19 +212,11 @@ The first build also compiles the `HOL` image if it is not already present; this
 ### Expected output (tail)
 
 ```
-Building HOL ...
-Finished HOL (0:01:12 elapsed time, ...)
 Running MIS_Cover ...
-MIS_Cover_Semantics: ...
-MIS_Commit_Bijection: ...
-MIS_Soundness_Completeness: ...
-MIS_Universal: ...
-MIS_Structure: ...
-MIS_Paw: ...
-Finished MIS_Cover (0:00:37 elapsed time, 0:01:34 cpu time, ...)
+Finished MIS_Cover (0:00:33 elapsed time, ...)
 ```
 
-The exact timings depend on your machine; the paper reports about **37 seconds** for the `MIS_Cover` session on an Intel I5 with Isabelle2025-2.
+The exact timings depend on your machine; a full build of the `MIS_Cover` session takes roughly **35 seconds** on a laptop-class machine with Isabelle2025-2.
 
 <img width="1366" height="768" alt="run" src="https://github.com/user-attachments/assets/3d10d248-4ee8-4568-b1fb-e391d954ec6b" />
 
@@ -218,26 +238,14 @@ To browse and interact with the proofs:
 isabelle jedit -d . MIS_Cover_Semantics.thy
 ```
 
-Replace `MIS_Cover_Semantics.thy` with any of the six theory files to open it directly. The `-d .` flag tells jEdit to use the current directory as the session directory. From inside jEdit you can also open the other theories via *File → Open*; the session `MIS_Cover` will appear in the *Theories* panel.
+Replace `MIS_Cover_Semantics.thy` with any of the seven theory files (for example `MIS_Reachability.thy`) to open it directly. The `-d .` flag tells jEdit to use the current directory as the session directory.
 
-## Step 5 — Build a specific theory only
+## Step 5 — Clean up
 
-To build just one theory (and its dependencies), pass the theory name without the `.thy` extension:
-
-```bash
-isabelle build -c -v -D . MIS_Structure
-```
-
-This is useful when you want to verify a single module quickly.
-
-## Step 6 — Clean up
-
-To remove all build artifacts (heap images, log files) and return to a pristine source tree:
+To remove build artifacts and return to a pristine source tree, rebuild with `-c`:
 
 ```bash
-isabelle build -c -D . MIS_Cover   # rebuild with -c already cleans the session
-# or, to remove everything:
-rm -rf output/
+isabelle build -c -D . MIS_Cover
 ```
 
 ---
@@ -249,7 +257,7 @@ rm -rf output/
 | `Bad session directory` | You ran `isabelle build` from outside the directory containing `ROOT`. | `cd` into the unzipped `PCIR_Proofs` directory first. |
 | `Unknown session MIS_Cover` | The `ROOT` file is missing or misnamed. | Ensure `ROOT` (no extension) is present in the current directory. |
 | Build hangs on `HOL` | First-time compilation of the `HOL` image. | Wait — this is normal on a first run. |
-| `Cannot find theory` | A theory file is missing or renamed. | Check that all six `.thy` files are present alongside `ROOT`. |
+| `Cannot find theory` | A theory file is missing or renamed. | Check that all seven `.thy` files are present alongside `ROOT`. |
 | Out-of-memory during build | Insufficient heap for `HOL`. | Increase the heap size in `ROOT` via `options [heap = 2000]` (values in MB). |
 | `isabelle: command not found` | Isabelle's `bin` directory is not on `PATH`. | Add `<isabelle-distribution>/bin` to `PATH`, or invoke `isabelle` by absolute path. |
 
@@ -267,6 +275,7 @@ These include
 - preservation of structural invariants;
 - serializability of configuration states;
 - parallel decomposition of sibling configurations;
+- a necessary-and-sufficient structural characterization of the reachable configurations, with an exact count;
 - constructive soundness and completeness proofs.
 
 These results provide a formal foundation for asynchronous and distributed exact graph coloring based on maximal independent set decomposition.
