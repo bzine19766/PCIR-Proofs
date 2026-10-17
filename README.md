@@ -218,7 +218,8 @@ Finished MIS_Cover (0:00:33 elapsed time, ...)
 
 The exact timings depend on your machine; a full build of the `MIS_Cover` session takes roughly **35 seconds** on a laptop-class machine with Isabelle2025-2.
 
-<img width="1366" height="768" alt="run" src="https://github.com/user-attachments/assets/3d10d248-4ee8-4568-b1fb-e391d954ec6b" />
+<img width="1366" height="768" alt="run" src="https://github.com/user-attachments/assets/6be816dc-7e2b-44f6-9cfc-4f1bfbd99406" />
+
 
 ## Step 3 — Build without cleaning (incremental)
 
