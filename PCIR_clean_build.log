@@ -1,0 +1,502 @@
+Started at Mon Oct 19 06:22:57 GMT+8 2026 (polyml-5.9.2_arm64_32-darwin on JCPs-MacBook-Air)
+ISABELLE_TOOL_JAVA_OPTIONS="-Djava.awt.headless=true -Xms128m -Xmx768m -Xss16m"
+ISABELLE_BUILD_OPTIONS=""
+
+ML_PLATFORM="arm64_32-darwin"
+ML_HOME="/Applications/Isabelle2025-2.app/contrib/polyml-5.9.2-2/arm64_32-darwin"
+ML_SYSTEM="polyml-5.9.2"
+ML_OPTIONS="--minheap 256 --maxheap 4096"
+
+Session Pure/Pure
+Session Misc/Tools
+Session HOL/HOL (main)
+Session HOL/HOL-Library (main timing)
+Session Unsorted/MIS_Cover
+Building HOL-Library ...
+HOL-Library: theory HOL-Library.README
+HOL-Library: theory HOL-Library.BNF_Axiomatization
+HOL-Library: theory HOL-Library.AList
+HOL-Library: theory HOL-Library.BNF_Corec
+HOL-Library: theory HOL-Library.README 100% (0.220s cumulated time)
+HOL-Library: theory HOL-Library.BNF_Axiomatization 100% (0.196s cumulated time)
+HOL-Library: theory HOL-Library.DAList
+HOL-Library: theory HOL-Library.Cancellation
+HOL-Library: theory HOL-Library.Multiset
+HOL-Library: theory HOL-Library.Case_Converter
+HOL-Library: theory HOL-Library.Code_Lazy
+HOL-Library: theory HOL-Library.Simps_Case_Conv
+HOL-Library: theory HOL-Library.Extended
+HOL-Library: theory HOL-Library.Simps_Case_Conv 100% (0.120s cumulated time)
+HOL-Library: theory HOL-Library.Centered_Division
+HOL-Library: theory HOL-Library.Char_ord
+HOL-Library: theory HOL-Library.Code_Abstract_Char
+HOL-Library: theory HOL-Library.DAList_Multiset
+HOL-Library: theory HOL-Library.Multiset_Order
+HOL-Library: theory HOL-Library.Code_Abstract_Nat
+HOL-Library: theory HOL-Library.Code_Binary_Nat
+HOL-Library: theory HOL-Library.Code_Target_Nat
+HOL-Library: theory HOL-Library.Code_Prolog
+HOL-Library: theory HOL-Library.Code_Target_Int
+HOL-Library: theory HOL-Library.Code_Target_Numeral
+HOL-Library: theory HOL-Library.Code_Test
+HOL-Library: theory HOL-Library.Code_Prolog 100% (0.806s cumulated time)
+HOL-Library: theory HOL-Library.Code_Target_Numeral 100% (0.371s cumulated time)
+HOL-Library: theory HOL-Library.Combine_PER
+HOL-Library: theory HOL-Library.Comparator
+HOL-Library: theory HOL-Library.Complete_Partial_Order2
+HOL-Library: theory HOL-Library.Conditional_Parametricity
+HOL-Library: theory HOL-Library.Confluence
+HOL-Library: theory HOL-Library.Confluent_Quotient
+HOL-Library: theory HOL-Library.Dlist
+HOL-Library: theory HOL-Library.Datatype_Records
+HOL-Library: theory HOL-Library.Debug
+HOL-Library: theory HOL-Library.Dual_Ordered_Lattice
+HOL-Library: theory HOL-Library.Fun_Lexorder
+HOL-Library: theory HOL-Library.Datatype_Records 100% (0.534s cumulated time)
+HOL-Library: theory HOL-Library.FuncSet
+HOL-Library: command "local_setup" running for 21.850s (line 155 of theory "HOL-Library.Code_Abstract_Char")
+HOL-Library: theory HOL-Library.Disjoint_Sets
+HOL-Library: theory HOL-Library.Function_Algebras
+HOL-Library: theory HOL-Library.Function_Division
+HOL-Library: theory HOL-Library.Groups_Big_Fun
+HOL-Library: command "local_setup" running for 23.878s (line 155 of theory "HOL-Library.Code_Abstract_Char")
+HOL-Library: theory HOL-Library.IArray
+HOL-Library: command "local_setup" running for 25.888s (line 155 of theory "HOL-Library.Code_Abstract_Char")
+HOL-Library: theory HOL-Library.Infinite_Set
+HOL-Library: command "local_setup" running for 27.905s (line 155 of theory "HOL-Library.Code_Abstract_Char")
+HOL-Library: theory HOL-Library.Omega_Words_Fun
+HOL-Library: theory HOL-Library.LaTeXsugar
+HOL-Library: theory HOL-Library.Lattice_Constructions
+HOL-Library: theory HOL-Library.LaTeXsugar 100% (0.192s cumulated time)
+HOL-Library: command "local_setup" running for 29.915s (line 155 of theory "HOL-Library.Code_Abstract_Char")
+HOL-Library: command "local_setup" running for 31.924s (line 155 of theory "HOL-Library.Code_Abstract_Char")
+HOL-Library: command "local_setup" running for 34.065s (line 155 of theory "HOL-Library.Code_Abstract_Char")
+HOL-Library: theory HOL-Library.ListVector
+HOL-Library: command "local_setup" running for 36.098s (line 155 of theory "HOL-Library.Code_Abstract_Char")
+HOL-Library: command "local_setup" running for 38.111s (line 155 of theory "HOL-Library.Code_Abstract_Char")
+HOL-Library: theory HOL-Library.List_Lenlexorder
+HOL-Library: theory HOL-Library.List_Lexorder
+HOL-Library: theory HOL-Library.Mapping
+HOL-Library: command "local_setup" running for 40.139s (line 155 of theory "HOL-Library.Code_Abstract_Char")
+HOL-Library: command "local_setup" running for 42.197s (line 155 of theory "HOL-Library.Code_Abstract_Char")
+HOL-Library: command "local_setup" running for 44.222s (line 155 of theory "HOL-Library.Code_Abstract_Char")
+HOL-Library: theory HOL-Library.AList_Mapping
+HOL-Library: theory HOL-Library.Monad_Syntax
+HOL-Library: theory HOL-Library.State_Monad
+HOL-Library: theory HOL-Library.Monad_Syntax 100% (0.181s cumulated time)
+HOL-Library: command "local_setup" running for 46.236s (line 155 of theory "HOL-Library.Code_Abstract_Char")
+HOL-Library: theory HOL-Library.More_List
+HOL-Library: theory HOL-Library.Poly_Mapping
+HOL-Library: theory HOL-Library.NList
+HOL-Library: theory HOL-Library.Nat_Bijection
+HOL-Library: theory HOL-Library.Stream
+HOL-Library: theory HOL-Library.Old_Datatype
+HOL-Library: theory HOL-Library.Old_Recdef
+HOL-Library: theory HOL-Library.Open_State_Syntax
+HOL-Library: theory HOL-Library.Option_ord
+HOL-Library: theory HOL-Library.Open_State_Syntax 100% (0.117s cumulated time)
+HOL-Library: theory HOL-Library.Parallel
+HOL-Library: theory HOL-Library.Pattern_Aliases
+HOL-Library: theory HOL-Library.Phantom_Type
+HOL-Library: theory HOL-Library.Power_By_Squaring
+HOL-Library: theory HOL-Library.Predicate_Compile_Alternative_Defs
+HOL-Library: theory HOL-Library.Predicate_Compile_Quickcheck
+HOL-Library: theory HOL-Library.Cardinality
+HOL-Library: theory HOL-Library.Preorder
+HOL-Library: theory HOL-Library.Product_Lexorder
+HOL-Library: theory HOL-Library.Predicate_Compile_Quickcheck 100% (3.826s cumulated time)
+HOL-Library: theory HOL-Library.Product_Plus
+HOL-Library: theory HOL-Library.Code_Cardinality
+HOL-Library: theory HOL-Library.Numeral_Type
+HOL-Library: theory HOL-Library.Product_Order
+HOL-Library: theory HOL-Library.Finite_Lattice
+HOL-Library: theory HOL-Library.Type_Length
+HOL-Library: theory HOL-Library.Saturated
+HOL-Library: theory HOL-Library.Word
+HOL-Library: theory HOL-Library.Quotient_Syntax
+HOL-Library: theory HOL-Library.Quotient_Option
+HOL-Library: theory HOL-Library.Quotient_Product
+HOL-Library: theory HOL-Library.Quotient_Set
+HOL-Library: theory HOL-Library.Quotient_List
+HOL-Library: theory HOL-Library.Quotient_Sum
+HOL-Library: theory HOL-Library.Quotient_Type
+HOL-Library: theory HOL-Library.RBT_Impl
+HOL-Library: theory HOL-Library.Quotient_Syntax 100% (0.031s cumulated time)
+HOL-Library: theory HOL-Library.Realizers
+HOL-Library: theory HOL-Library.Reflection
+HOL-Library: theory HOL-Library.Realizers 100% (0.412s cumulated time)
+HOL-Library: theory HOL-Library.Refute
+HOL-Library: theory HOL-Library.Rewrite
+HOL-Library: theory HOL-Library.Set_Algebras
+HOL-Library: theory HOL-Library.Signed_Division
+HOL-Library: theory HOL-Library.Reflection 100% (0.224s cumulated time)
+HOL-Library: theory HOL-Library.Refute 100% (1.153s cumulated time)
+HOL-Library: theory HOL-Library.Sorting_Algorithms
+HOL-Library: theory HOL-Library.Sublist
+HOL-Library: theory HOL-Library.Prefix_Order
+HOL-Library: theory HOL-Library.Subseq_Order
+HOL-Library: theory HOL-Library.Suc_Notation
+HOL-Library: theory HOL-Library.Time_Commands
+HOL-Library: theory HOL-Library.Suc_Notation 100% (0.075s cumulated time)
+HOL-Library: theory HOL-Library.Time_Functions
+HOL-Library: theory HOL-Library.Time_Manual
+HOL-Library: theory HOL-Library.Time_Commands 100% (0.303s cumulated time)
+HOL-Library: theory HOL-Library.Transitive_Closure_Table
+HOL-Library: theory HOL-Library.Tree
+HOL-Library: theory HOL-Library.Tree_Multiset
+HOL-Library: theory HOL-Library.Uprod
+HOL-Library: theory HOL-Library.While_Combinator
+HOL-Library: theory HOL-Library.Bourbaki_Witt_Fixpoint
+HOL-Library: theory HOL-Library.Z2
+HOL-Library: theory HOL-Library.Countable
+HOL-Library: theory HOL-Library.Countable_Set
+HOL-Library: theory HOL-Library.Countable_Complete_Lattices
+HOL-Library: theory HOL-Library.Countable_Set_Type
+HOL-Library: theory HOL-Library.Equipollence
+HOL-Library: theory HOL-Library.Ramsey
+HOL-Library: theory HOL-Library.Set_Idioms
+HOL-Library: theory HOL-Library.FSet
+HOL-Library: theory HOL-Library.Finite_Map
+HOL-Library: theory HOL-Library.Disjoint_FSets
+HOL-Library: theory HOL-Library.Code_Real_Approx_By_Float
+HOL-Library: theory HOL-Library.Complex_Order
+HOL-Library: theory HOL-Library.Diagonal_Subsequence
+HOL-Library: theory HOL-Library.Discrete_Functions
+HOL-Library: theory HOL-Library.Going_To_Filter
+HOL-Library: theory HOL-Library.Indicator_Function
+HOL-Library: theory HOL-Library.Infinite_Typeclass
+HOL-Library: theory HOL-Library.Landau_Symbols
+HOL-Library: theory HOL-Library.Lattice_Algebras
+HOL-Library: command "function" running for 20.300s (line 2320 of theory "HOL-Library.RBT_Impl")
+HOL-Library: command "function" running for 22.716s (line 2320 of theory "HOL-Library.RBT_Impl")
+HOL-Library: theory HOL-Library.Interval
+HOL-Library: theory HOL-Library.RBT
+HOL-Library: theory HOL-Library.Liminf_Limsup
+HOL-Library: theory HOL-Library.RBT_Mapping
+HOL-Library: theory HOL-Library.RBT_Set
+HOL-Library: theory HOL-Library.Log_Nat
+HOL-Library: theory HOL-Library.Float
+HOL-Library: theory HOL-Library.Lub_Glb
+HOL-Library: theory HOL-Library.Nonpos_Ints
+HOL-Library: theory HOL-Library.OptionalSugar
+HOL-Library: theory HOL-Library.Order_Continuity
+HOL-Library: theory HOL-Library.OptionalSugar 100% (0.596s cumulated time)
+HOL-Library: theory HOL-Library.Extended_Nat
+HOL-Library: theory HOL-Library.Code_Target_Numeral_Float
+HOL-Library: theory HOL-Library.Interval_Float
+HOL-Library: theory HOL-Library.Extended_Real
+HOL-Library: theory HOL-Library.Linear_Temporal_Logic_on_Streams
+HOL-Library: theory HOL-Library.Periodic_Fun
+HOL-Library: theory HOL-Library.Quadratic_Discriminant
+HOL-Library: theory HOL-Library.Real_Mod
+HOL-Library: theory HOL-Library.Sum_of_Squares
+HOL-Library: theory HOL-Library.Extended_Nonnegative_Real
+HOL-Library: theory HOL-Library.Tree_Real
+HOL-Library: theory HOL-Library.Library
+HOL-Library: theory HOL-Library.Sum_of_Squares 100% (11.849s cumulated time)
+HOL-Library: theory HOL-Library.BNF_Corec 100% (12.628s cumulated time)
+HOL-Library: theory HOL-Library.AList 100% (7.792s cumulated time)
+HOL-Library: theory HOL-Library.Cancellation 100% (0.620s cumulated time)
+HOL-Library: theory HOL-Library.DAList 100% (0.826s cumulated time)
+HOL-Library: theory HOL-Library.Case_Converter 100% (0.342s cumulated time)
+HOL-Library: theory HOL-Library.Code_Lazy 100% (0.528s cumulated time)
+HOL-Library: theory HOL-Library.Library 100% (15.764s cumulated time)
+HOL-Library: theory HOL-Library.Extended 100% (2.904s cumulated time)
+HOL-Library: theory HOL-Library.Centered_Division 100% (2.561s cumulated time)
+HOL-Library: theory HOL-Library.Char_ord 100% (0.527s cumulated time)
+HOL-Library: theory HOL-Library.Multiset 100% (35.027s cumulated time)
+HOL-Library: theory HOL-Library.Code_Abstract_Char 100% (60.497s cumulated time)
+HOL-Library: theory HOL-Library.DAList_Multiset 100% (4.282s cumulated time)
+HOL-Library: theory HOL-Library.Multiset_Order 100% (17.294s cumulated time)
+HOL-Library: theory HOL-Library.Code_Abstract_Nat 100% (0.241s cumulated time)
+HOL-Library: theory HOL-Library.Code_Test 100% (2.429s cumulated time)
+HOL-Library: theory HOL-Library.Combine_PER 100% (0.537s cumulated time)
+HOL-Library: theory HOL-Library.Code_Binary_Nat 100% (0.688s cumulated time)
+HOL-Library: theory HOL-Library.Code_Target_Int 100% (0.480s cumulated time)
+HOL-Library: theory HOL-Library.Code_Target_Nat 100% (1.477s cumulated time)
+HOL-Library: theory HOL-Library.Comparator 100% (4.987s cumulated time)
+HOL-Library: theory HOL-Library.Complete_Partial_Order2 100% (16.993s cumulated time)
+HOL-Library: theory HOL-Library.Conditional_Parametricity 100% (0.549s cumulated time)
+HOL-Library: theory HOL-Library.Confluence 100% (0.575s cumulated time)
+HOL-Library: theory HOL-Library.Confluent_Quotient 100% (1.046s cumulated time)
+HOL-Library: theory HOL-Library.Debug 100% (0.099s cumulated time)
+HOL-Library: theory HOL-Library.Dlist 100% (21.759s cumulated time)
+HOL-Library: theory HOL-Library.Dual_Ordered_Lattice 100% (3.662s cumulated time)
+HOL-Library: theory HOL-Library.Fun_Lexorder 100% (1.630s cumulated time)
+HOL-Library: theory HOL-Library.FuncSet 100% (22.018s cumulated time)
+HOL-Library: theory HOL-Library.Disjoint_Sets 100% (11.652s cumulated time)
+HOL-Library: theory HOL-Library.Function_Algebras 100% (0.759s cumulated time)
+HOL-Library: theory HOL-Library.Function_Division 100% (0.121s cumulated time)
+HOL-Library: theory HOL-Library.Groups_Big_Fun 100% (9.886s cumulated time)
+HOL-Library: theory HOL-Library.IArray 100% (2.866s cumulated time)
+HOL-Library: theory HOL-Library.Infinite_Set 100% (14.403s cumulated time)
+HOL-Library: theory HOL-Library.Omega_Words_Fun 100% (7.117s cumulated time)
+HOL-Library: theory HOL-Library.Lattice_Constructions 100% (9.152s cumulated time)
+HOL-Library: theory HOL-Library.ListVector 100% (2.346s cumulated time)
+HOL-Library: theory HOL-Library.List_Lexorder 100% (0.748s cumulated time)
+HOL-Library: theory HOL-Library.List_Lenlexorder 100% (1.156s cumulated time)
+HOL-Library: theory HOL-Library.Mapping 100% (14.961s cumulated time)
+HOL-Library: theory HOL-Library.AList_Mapping 100% (2.268s cumulated time)
+HOL-Library: theory HOL-Library.More_List 100% (2.141s cumulated time)
+HOL-Library: theory HOL-Library.NList 100% (0.473s cumulated time)
+HOL-Library: theory HOL-Library.State_Monad 100% (2.088s cumulated time)
+HOL-Library: theory HOL-Library.Nat_Bijection 100% (1.518s cumulated time)
+HOL-Library: theory HOL-Library.Poly_Mapping 100% (10.166s cumulated time)
+HOL-Library: theory HOL-Library.Old_Datatype 100% (3.750s cumulated time)
+HOL-Library: theory HOL-Library.Stream 100% (8.622s cumulated time)
+HOL-Library: theory HOL-Library.Old_Recdef 100% (4.406s cumulated time)
+HOL-Library: theory HOL-Library.Parallel 100% (1.363s cumulated time)
+HOL-Library: theory HOL-Library.Pattern_Aliases 100% (0.384s cumulated time)
+HOL-Library: theory HOL-Library.Power_By_Squaring 100% (2.307s cumulated time)
+HOL-Library: theory HOL-Library.Phantom_Type 100% (3.591s cumulated time)
+HOL-Library: theory HOL-Library.Predicate_Compile_Alternative_Defs 100% (1.622s cumulated time)
+HOL-Library: theory HOL-Library.Preorder 100% (2.252s cumulated time)
+HOL-Library: theory HOL-Library.Product_Lexorder 100% (0.912s cumulated time)
+HOL-Library: theory HOL-Library.Cardinality 100% (8.219s cumulated time)
+HOL-Library: theory HOL-Library.Code_Cardinality 100% (1.777s cumulated time)
+HOL-Library: theory HOL-Library.Product_Plus 100% (0.931s cumulated time)
+HOL-Library: theory HOL-Library.Numeral_Type 100% (6.509s cumulated time)
+HOL-Library: theory HOL-Library.Type_Length 100% (2.265s cumulated time)
+HOL-Library: theory HOL-Library.Product_Order 100% (3.343s cumulated time)
+HOL-Library: theory HOL-Library.Saturated 100% (2.907s cumulated time)
+HOL-Library: theory HOL-Library.Quotient_Product 100% (0.339s cumulated time)
+HOL-Library: theory HOL-Library.Quotient_Option 100% (0.286s cumulated time)
+HOL-Library: theory HOL-Library.Finite_Lattice 100% (7.576s cumulated time)
+HOL-Library: theory HOL-Library.Quotient_Set 100% (2.030s cumulated time)
+HOL-Library: theory HOL-Library.Quotient_List 100% (0.696s cumulated time)
+HOL-Library: theory HOL-Library.Quotient_Sum 100% (0.750s cumulated time)
+HOL-Library: theory HOL-Library.Quotient_Type 100% (0.449s cumulated time)
+HOL-Library: theory HOL-Library.Set_Algebras 100% (3.331s cumulated time)
+HOL-Library: theory HOL-Library.Rewrite 100% (0.246s cumulated time)
+HOL-Library: theory HOL-Library.Word 100% (77.448s cumulated time)
+HOL-Library: theory HOL-Library.Signed_Division 100% (4.825s cumulated time)
+HOL-Library: theory HOL-Library.Sorting_Algorithms 100% (25.087s cumulated time)
+HOL-Library: theory HOL-Library.Sublist 100% (14.951s cumulated time)
+HOL-Library: theory HOL-Library.Prefix_Order 100% (0.127s cumulated time)
+HOL-Library: theory HOL-Library.Subseq_Order 100% (0.481s cumulated time)
+HOL-Library: theory HOL-Library.Time_Functions 100% (1.686s cumulated time)
+HOL-Library: theory HOL-Library.Time_Manual 100% (1.383s cumulated time)
+HOL-Library: theory HOL-Library.Transitive_Closure_Table 100% (1.131s cumulated time)
+HOL-Library: command "qed" running for 21.986s (line 786 of theory "HOL-Library.RBT_Impl")
+HOL-Library: command "qed" running for 24.189s (line 786 of theory "HOL-Library.RBT_Impl")
+HOL-Library: command "qed" running for 26.240s (line 786 of theory "HOL-Library.RBT_Impl")
+HOL-Library: command "qed" running for 28.289s (line 786 of theory "HOL-Library.RBT_Impl")
+HOL-Library: command "qed" running for 31.054s (line 786 of theory "HOL-Library.RBT_Impl")
+HOL-Library: command "qed" running for 33.983s (line 786 of theory "HOL-Library.RBT_Impl")
+HOL-Library: theory HOL-Library.Tree 100% (28.109s cumulated time)
+HOL-Library: command "qed" running for 36.014s (line 786 of theory "HOL-Library.RBT_Impl")
+HOL-Library: theory HOL-Library.Tree_Multiset 100% (1.919s cumulated time)
+HOL-Library: command "qed" running for 38.141s (line 786 of theory "HOL-Library.RBT_Impl")
+HOL-Library: theory HOL-Library.Uprod 100% (9.764s cumulated time)
+HOL-Library: theory HOL-Library.While_Combinator 100% (3.895s cumulated time)
+HOL-Library: theory HOL-Library.Bourbaki_Witt_Fixpoint 100% (1.861s cumulated time)
+HOL-Library: theory HOL-Library.Countable 100% (1.741s cumulated time)
+HOL-Library: theory HOL-Library.Z2 100% (0.625s cumulated time)
+HOL-Library: theory HOL-Library.Countable_Set 100% (4.382s cumulated time)
+HOL-Library: theory HOL-Library.Countable_Complete_Lattices 100% (5.378s cumulated time)
+HOL-Library: theory HOL-Library.Countable_Set_Type 100% (10.517s cumulated time)
+HOL-Library: theory HOL-Library.Equipollence 100% (29.713s cumulated time)
+HOL-Library: theory HOL-Library.Ramsey 100% (58.785s cumulated time)
+HOL-Library: theory HOL-Library.Set_Idioms 100% (13.752s cumulated time)
+HOL-Library: theory HOL-Library.FSet 100% (14.333s cumulated time)
+HOL-Library: command "by" running for 20.056s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 22.195s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 22.127s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 24.225s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 24.157s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 26.264s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 26.196s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 28.305s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 28.237s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 30.346s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 30.278s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 32.426s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 32.358s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 34.491s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 34.423s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 36.578s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 36.510s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 38.604s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 38.536s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 40.629s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 40.561s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 42.634s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 42.566s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 44.650s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 44.582s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 47.357s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 47.289s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 50.282s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 50.214s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 52.763s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 52.695s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 55.287s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 55.219s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 57.399s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 57.331s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 59.593s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 59.525s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 61.650s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 61.582s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 63.857s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 63.789s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 65.965s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 65.897s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 68.065s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 67.997s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 70.157s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 70.089s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 72.191s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 72.123s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 74.222s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 74.154s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 76.395s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 76.327s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 78.449s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 78.381s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 80.503s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 80.435s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 82.560s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 82.492s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 84.884s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 84.816s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 86.979s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 86.911s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 89.045s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 88.977s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 91.137s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 91.069s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 93.234s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 93.166s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 95.340s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 95.272s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 97.472s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 97.404s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 101.176s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 101.108s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 103.598s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 103.530s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 106.658s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 106.590s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 108.940s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 108.872s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 111.772s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 111.704s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 114.124s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 114.056s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 116.144s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 116.076s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 118.152s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 118.084s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 120.156s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 120.088s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 122.171s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 122.103s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 124.194s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 124.126s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 126.218s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 126.150s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 128.253s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 128.185s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 130.277s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 130.209s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 132.288s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 132.220s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 134.311s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 134.243s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 136.324s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 136.256s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 138.335s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 138.267s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 140.338s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 140.270s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 142.347s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 142.279s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 144.361s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 144.293s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 146.368s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 146.300s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 148.389s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 148.321s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 150.396s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 150.328s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 152.403s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 152.335s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 154.409s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 154.341s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 156.415s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 156.347s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 158.419s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 158.351s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 160.420s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 160.352s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 162.424s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 162.356s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 164.430s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 164.362s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 166.434s (line 1314 of theory "HOL-Library.Finite_Map")
+HOL-Library: command "by" running for 166.366s (line 1329 of theory "HOL-Library.Finite_Map")
+HOL-Library: theory HOL-Library.Finite_Map 100% (354.543s cumulated time)
+HOL-Library: theory HOL-Library.Disjoint_FSets 100% (0.722s cumulated time)
+HOL-Library: theory HOL-Library.Code_Real_Approx_By_Float 100% (0.810s cumulated time)
+HOL-Library: theory HOL-Library.Complex_Order 100% (0.149s cumulated time)
+HOL-Library: theory HOL-Library.Diagonal_Subsequence 100% (0.278s cumulated time)
+HOL-Library: theory HOL-Library.Discrete_Functions 100% (2.631s cumulated time)
+HOL-Library: theory HOL-Library.Going_To_Filter 100% (0.596s cumulated time)
+HOL-Library: theory HOL-Library.Indicator_Function 100% (1.356s cumulated time)
+HOL-Library: theory HOL-Library.Infinite_Typeclass 100% (0.429s cumulated time)
+HOL-Library: command "by" running for 20.494s (line 2279 of theory "HOL-Library.RBT_Impl")
+HOL-Library: command "by" running for 22.512s (line 2279 of theory "HOL-Library.RBT_Impl")
+HOL-Library: command "by" running for 24.543s (line 2279 of theory "HOL-Library.RBT_Impl")
+HOL-Library: command "by" running for 26.568s (line 2279 of theory "HOL-Library.RBT_Impl")
+HOL-Library: theory HOL-Library.Landau_Symbols 100% (35.546s cumulated time)
+HOL-Library: theory HOL-Library.Lattice_Algebras 100% (43.132s cumulated time)
+HOL-Library: command "by" running for 20.691s (line 2669 of theory "HOL-Library.RBT_Impl")
+HOL-Library: command "by" running for 22.702s (line 2669 of theory "HOL-Library.RBT_Impl")
+HOL-Library: command "by" running for 24.718s (line 2669 of theory "HOL-Library.RBT_Impl")
+HOL-Library: command "by" running for 26.743s (line 2669 of theory "HOL-Library.RBT_Impl")
+HOL-Library: command "by" running for 28.758s (line 2669 of theory "HOL-Library.RBT_Impl")
+HOL-Library: theory HOL-Library.Interval 100% (58.515s cumulated time)
+HOL-Library: theory HOL-Library.RBT_Impl 100% (506.022s cumulated time)
+HOL-Library: theory HOL-Library.RBT 100% (1.817s cumulated time)
+HOL-Library: theory HOL-Library.Liminf_Limsup 100% (4.677s cumulated time)
+HOL-Library: theory HOL-Library.RBT_Mapping 100% (1.536s cumulated time)
+HOL-Library: theory HOL-Library.Log_Nat 100% (2.503s cumulated time)
+HOL-Library: theory HOL-Library.Lub_Glb 100% (0.588s cumulated time)
+HOL-Library: theory HOL-Library.Nonpos_Ints 100% (1.652s cumulated time)
+HOL-Library: theory HOL-Library.RBT_Set 100% (3.521s cumulated time)
+HOL-Library: theory HOL-Library.Order_Continuity 100% (5.087s cumulated time)
+HOL-Library: theory HOL-Library.Float 100% (36.822s cumulated time)
+HOL-Library: theory HOL-Library.Extended_Nat 100% (3.682s cumulated time)
+HOL-Library: theory HOL-Library.Code_Target_Numeral_Float 100% (0.457s cumulated time)
+HOL-Library: theory HOL-Library.Interval_Float 100% (6.486s cumulated time)
+HOL-Library: theory HOL-Library.Linear_Temporal_Logic_on_Streams 100% (15.968s cumulated time)
+HOL-Library: theory HOL-Library.Periodic_Fun 100% (3.779s cumulated time)
+HOL-Library: theory HOL-Library.Quadratic_Discriminant 100% (2.936s cumulated time)
+HOL-Library: theory HOL-Library.Real_Mod 100% (25.286s cumulated time)
+HOL-Library: theory HOL-Library.Extended_Real 100% (240.590s cumulated time)
+HOL-Library: theory HOL-Library.Extended_Nonnegative_Real 100% (87.668s cumulated time)
+HOL-Library: theory HOL-Library.Option_ord 100% (12.190s cumulated time)
+HOL-Library: theory HOL-Library.Tree_Real 100% (4.086s cumulated time)
+Timing HOL-Library (2 threads, 1220.161s elapsed time, 1403.398s cpu time, 284.351s GC time, factor 1.15)
+Finished HOL-Library (0:20:38 elapsed time, 0:23:47 cpu time, factor 1.15)
+Running MIS_Cover ...
+MIS_Cover: theory MIS_Cover.MIS_Cover_Semantics
+MIS_Cover: theory MIS_Cover.MIS_Commit_Bijection
+MIS_Cover: theory MIS_Cover.MIS_Soundness_Completeness
+MIS_Cover: theory MIS_Cover.MIS_Universal
+MIS_Cover: theory MIS_Cover.MIS_Structure
+MIS_Cover: theory MIS_Cover.MIS_Cover_Semantics 100% (1.001s cumulated time)
+MIS_Cover: theory MIS_Cover.MIS_Commit_Bijection 100% (0.517s cumulated time)
+MIS_Cover: theory MIS_Cover.MIS_Paw
+MIS_Cover: theory MIS_Cover.MIS_Reachability
+MIS_Cover: theory MIS_Cover.MIS_Soundness_Completeness 100% (9.405s cumulated time)
+MIS_Cover: theory MIS_Cover.MIS_Universal 100% (8.499s cumulated time)
+MIS_Cover: theory MIS_Cover.MIS_Structure 100% (1.179s cumulated time)
+MIS_Cover: theory MIS_Cover.MIS_Reachability 100% (0.790s cumulated time)
+MIS_Cover: theory MIS_Cover.MIS_Paw 100% (3.998s cumulated time)
+Timing MIS_Cover (2 threads, 13.717s elapsed time, 25.263s cpu time, 1.247s GC time, factor 1.84)
+Finished MIS_Cover (0:00:15 elapsed time, 0:00:26 cpu time, factor 1.69)
+
+Finished at Mon Oct 19 06:44:13 GMT+8 2026
+0:21:16 elapsed time, 0:24:14 cpu time, factor 1.14

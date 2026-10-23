@@ -1,0 +1,36 @@
+PCIR clean-build verification - 19 October 2026
+
+ISABELLE CHECK
+Clean build succeeded under Isabelle2025-2 using Zine's supplied ROOT
+and all seven theory files unchanged. All eight files were freshly
+extracted from PCIR_Proofs.zip and verified byte-for-byte against the
+archive both before and after the build.
+
+The original MIS_Cover session inherits HOL-Library. The full HOL-Library
+dependency was built successfully, followed by MIS_Cover. The run used
+a fresh isolated Isabelle user directory, with no existing MIS_Cover or
+HOL-Library build there; the standard installed Pure and HOL heaps were
+used. No session definitions, theory files, or proof statements changed.
+The supplied 600-second MIS_Cover timeout was retained.
+
+Command (with an isolated USER_HOME):
+isabelle build -c -D <fresh extraction>/PCIR_Proofs -o threads=2 -j 1 -v MIS_Cover
+
+The earlier qualification about not completing the supplied ROOT build
+is now resolved. The separate experimental and exposition findings remain.
+
+Timing HOL-Library (2 threads, 1220.161s elapsed time, 1403.398s cpu time, 284.351s GC time, factor 1.15)
+Finished HOL-Library (0:20:38 elapsed time, 0:23:47 cpu time, factor 1.15)
+Timing MIS_Cover (2 threads, 13.717s elapsed time, 25.263s cpu time, 1.247s GC time, factor 1.84)
+Finished MIS_Cover (0:00:15 elapsed time, 0:00:26 cpu time, factor 1.69)
+Finished at Mon Oct 19 06:44:13 GMT+8 2026
+
+SOURCE SHA-256 DIGESTS
+MIS_Commit_Bijection.thy  976211f6cb4f041b31fb43661a88878b585270b95826edf91cbbbbca22f4fa42
+MIS_Cover_Semantics.thy  b9346d22ccf4cf455e3bf43f9990fe79388ef4686e8bbc7c6b23d3b92a12c7ab
+MIS_Paw.thy  c86306f9a28742d4f5aaf40d0e5b7cd3092b0b1d31d12f94cb374c8753774ff8
+MIS_Reachability.thy  f6356a9feba6dffeb4bb072263b897da9cbf35c0d56be5195bf5709b86aee57a
+MIS_Soundness_Completeness.thy  8b4fa658018bf4d9246cde0596e8c243ee3152603f3de39c3184f415cbf6957b
+MIS_Structure.thy  accfbde7fc5d035345490928e74a8d1d08f16487c495eb96ce30207fda4cfdd4
+MIS_Universal.thy  1bf4fd1f9d8bd0022b59399d3827e89746a35fe72d4b431567b891443cace127
+ROOT  5e4ade95954c250f26c6da633f34d2d878e5bd1fee0d883d7ccac817c4a75566
