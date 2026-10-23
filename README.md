@@ -287,11 +287,11 @@ These results provide a formal foundation for asynchronous and distributed exact
 
 This work was carried out through close collaboration.
 
-- **Dr. Zine El Abidine Bouneb** developed the original PCIR (Parallel Coloring Iterative Refinement) algorithm, the configuration-state model, and the underlying graph coloring methodology.
+- **Zine El Abidine Bouneb** developed the original PCIR (Parallel Coloring Iterative Refinement) algorithm, the configuration-state model, and the underlying graph coloring methodology.
 
 - **Jim Woodcock** supervised the formal methods aspect of the work, proposed presenting the algorithm as a configuration-state semantics, guided the mathematical structure of the correctness proofs, and introduced the use of Isabelle/HOL for the verification.
 
-- The complete Isabelle/HOL formalization contained in this repository was developed by **Dr. Zine El Abidine Bouneb** under the supervision of **Jim Woodcock**, with AI assistance as described in the next section.
+- The complete Isabelle/HOL formalization contained in this repository was developed by **Zine El Abidine Bouneb** under the supervision of **Jim Woodcock**, with AI assistance as described in the next section.
 
 Both authors contributed substantially to the resulting research and share responsibility for the scientific contribution presented in the accompanying paper.
 
