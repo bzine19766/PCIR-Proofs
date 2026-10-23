@@ -6,7 +6,7 @@ Machine-checked Isabelle/HOL proofs accompanying the paper
 
 by
 
-**Dr. Zine El Abidine Bouneb**  
+**Zine El Abidine Bouneb**  
 University of Oum El Bouaghi, Algeria
 
 **Jim Woodcock**  
