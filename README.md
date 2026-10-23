@@ -9,7 +9,7 @@ by
 **Dr. Zine El Abidine Bouneb**  
 University of Oum El Bouaghi, Algeria
 
-**Prof. Jim Woodcock**  
+**Jim Woodcock**  
 University of York, United Kingdom
 
 ---
@@ -289,11 +289,23 @@ This work was carried out through close collaboration.
 
 - **Dr. Zine El Abidine Bouneb** developed the original PCIR (Parallel Coloring Iterative Refinement) algorithm, the configuration-state model, and the underlying graph coloring methodology.
 
-- **Prof. Jim Woodcock** supervised the formal methods aspect of the work, proposed presenting the algorithm as a configuration-state semantics, guided the mathematical structure of the correctness proofs, and introduced the use of Isabelle/HOL for the verification.
+- **Jim Woodcock** supervised the formal methods aspect of the work, proposed presenting the algorithm as a configuration-state semantics, guided the mathematical structure of the correctness proofs, and introduced the use of Isabelle/HOL for the verification.
 
-- The complete Isabelle/HOL formalization contained in this repository was implemented by **Dr. Zine El Abidine Bouneb** under the supervision of **Prof. Jim Woodcock**.
+- The complete Isabelle/HOL formalization contained in this repository was developed by **Dr. Zine El Abidine Bouneb** under the supervision of **Jim Woodcock**, with AI assistance as described in the next section.
 
 Both authors contributed substantially to the resulting research and share responsibility for the scientific contribution presented in the accompanying paper.
+
+---
+
+# Declaration of Generative AI Use
+
+Generative AI (Claude, developed by Anthropic) was used during the preparation of this work. It assisted with:
+
+- drafting, repairing and checking the Isabelle/HOL theory files in this repository (including proof scripts and the paper-to-theorem correspondence);
+- writing and debugging the Python scripts used for the experiments and for brute-force cross-checks of the formal statements;
+- LaTeX source and proofreading of the accompanying paper.
+
+The authors specified the mathematical content and the results to be proved, reviewed all AI-generated output, ran the Isabelle builds and the experiments themselves, and take full responsibility for the correctness of the proofs, the code, the reported results and the paper. The correctness of the Isabelle development does not rest on the AI: every theorem is checked by the Isabelle proof kernel (`isabelle build -c -v -D . MIS_Cover`).
 
 ---
 
