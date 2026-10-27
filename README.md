@@ -57,6 +57,138 @@ Finished MIS_Cover (0:00:33 elapsed time, ...)
 
 ---
 
+# Running the Python Experiments (Tables 3 and 4)
+
+The script `pcir_table3_table4.py` reproduces the DIMACS benchmark results in Table 3 and the canonical-ordering ablation results in Table 4 of the paper. It uses only the Python standard library and requires **Python 3.10 or later**.
+
+## Requirements
+
+- Python 3.10 or later
+- The DIMACS `.col` files used in the experiments
+- No third-party Python packages are required
+
+Check your Python installation:
+
+```bash
+python --version
+```
+
+On Windows, if `python` is not recognized, try:
+
+```bash
+py --version
+```
+
+## Repository layout
+
+Place the script and the DIMACS input directory in the following layout:
+
+```text
+PCIR/
+├── pcir_table3_table4.py
+├── DIMACS_all_ascii/
+│   ├── myciel3.col
+│   ├── myciel4.col
+│   ├── queen5_5.col
+│   ├── queen6_6.col
+│   ├── queen7_7.col
+│   ├── myciel5.col
+│   ├── myciel6.col
+│   ├── myciel7.col
+│   ├── queen8_8.col
+│   ├── queen9_9.col
+│   ├── le450_5a.col
+│   ├── le450_5b.col
+│   ├── le450_15a.col
+│   └── le450_25a.col
+```
+
+The script includes the graph data for `myciel3.col` as a fallback for its internal counter checks, but the complete reproduction requires the appropriate DIMACS input files, including `myciel4.col` for Table 4.
+
+## Check the Python script
+
+Python scripts do not need to be compiled into executables before they can be run. To check the script for syntax errors, execute:
+
+```bash
+python -m py_compile pcir_table3_table4.py
+```
+
+If the command completes without an error message, the script passes Python's syntax compilation check. This does not by itself verify the benchmark results.
+
+## Run the reproduction
+
+From the repository root, run:
+
+```bash
+python pcir_table3_table4.py --dimacs-dir ./DIMACS_all_ascii
+```
+
+On Windows, the same command works from the `D:\PCIR` directory:
+
+```bat
+cd /d D:\PCIR
+python pcir_table3_table4.py --dimacs-dir .\DIMACS_all_ascii
+```
+
+By default, each Table 3 instance has a 30-second timeout. To use a different timeout, specify it in seconds:
+
+```bash
+python pcir_table3_table4.py --dimacs-dir ./DIMACS_all_ascii --timeout 60
+```
+
+To specify a separate output directory:
+
+```bash
+python pcir_table3_table4.py --dimacs-dir ./DIMACS_all_ascii --output-dir ./results --timeout 30
+```
+
+## What the script does
+
+**Table 3 — DIMACS benchmark**
+
+The script runs the PCIR configuration-search engine on 14 DIMACS graph-coloring instances. It records the number of vertices and edges, the target chromatic number, the best coloring count found, the number of popped search occurrences, the runtime, and whether the target was reached and the search was exhausted.
+
+The implementation accepts DIMACS files whose edge header counts either undirected edges or both directions of each edge. It checks the header against the parsed graph.
+
+**Table 4 — Canonical-ordering ablation**
+
+The script compares canonical and noncanonical configuration enumeration on `myciel3.col` and `myciel4.col`. It reports the number of popped occurrences for each variant and the reduction obtained through canonical ordering.
+
+For the noncanonical `myciel4.col` case, the memoized counter is used without running the direct exhaustive engine because the expected runtime is computationally impractical. The direct engine is cross-checked against the counter on the other three Table 4 cases.
+
+## Generated output files
+
+The script creates a `pcir_reproduction_outputs` directory inside the DIMACS directory by default:
+
+| File | Description |
+|---|---|
+| `table3_dimacs.csv` | Machine-readable Table 3 results |
+| `table3_dimacs.md` | Markdown version of Table 3 |
+| `table4_canonical_ablation.csv` | Machine-readable Table 4 results |
+| `table4_canonical_ablation.md` | Markdown version of Table 4 |
+| `pcir_reproduction_results.json` | Combined results and run metadata in JSON format |
+
+## Interpreting the results
+
+A run that reaches the target chromatic number before the timeout has found a coloring with the target number of colors. However, **reaching the target is not equivalent to exhausting the search**.
+
+- `TARGET_REACHED_EXHAUSTIVE`: the target was reached and the search completed.
+- `TARGET_REACHED_TIMEOUT`: the target was reached, but the search timed out before exhaustion.
+- `TIMEOUT_TARGET_NOT_REACHED`: the search timed out without reaching the target.
+- `EXHAUSTED_TARGET_NOT_REACHED`: the search completed without reaching the target.
+
+The number of popped occurrences includes repeated occurrences, dead ends, and pruned nodes as defined by the implementation. It should not be interpreted as the number of distinct configurations.
+
+Runtime and timeout-related counts may vary across machines and Python environments. Exhaustive counts for the same input and configuration are deterministic.
+
+## Reproducibility notes
+
+For reproducible comparisons, use the same DIMACS inputs, target values, canonical-ordering settings, and timeout. The generated CSV and JSON files provide machine-readable records for checking the reported results against the tables in the paper.
+
+The script is intended to support independent reproduction of the reported experiments. A successful syntax check alone is not evidence that the benchmark results have been reproduced; the script must be run against the required input files.
+
+---
+
 # Formal Results
 
 The repository contains machine-checked proofs of:
