@@ -1,0 +1,5 @@
+instance,variant,vertices,edges,paper_popped_occurrences,independent_popped_occurrences,best_coloring_size,expected_reproduction_count,count_matches_reproduction,count_matches_paper,independent_runtime_seconds,engine_popped_occurrences,engine_best_coloring_size,engine_status,independent_engine_agree,engine_runtime_seconds,skip_reason
+myciel3.col,canonical,11,20,2325,2325,4,2325,True,True,0.003828,2325,4,EXHAUSTED_TARGET_NOT_REACHED,True,0.014859,
+myciel3.col,noncanonical,11,20,969712,969712,4,969712,True,True,0.004591,969712,4,EXHAUSTED_TARGET_NOT_REACHED,True,4.598547,
+myciel4.col,canonical,23,71,929315,929315,5,929315,True,True,1.058997,929315,5,EXHAUSTED_TARGET_NOT_REACHED,True,7.187797,
+myciel4.col,noncanonical,23,71,3450514238574088,3450514238574088,5,3450514238574088,True,True,1.435489,,,SKIPPED_RUNTIME_INFEASIBLE,,,An exhaustive direct-engine run was not attempted because its expected runtime is computationally impractical for this case. The memoised counter is cross-checked against the direct engine on the other three Table 4 cases.
