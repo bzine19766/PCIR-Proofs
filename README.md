@@ -4,13 +4,7 @@ Machine-checked Isabelle/HOL proofs accompanying the paper
 
 > **A Configuration-State Semantics for MIS-Cover Graph Coloring**
 
-by
-
-**Zine El Abidine Bouneb**  
-University of Oum El Bouaghi, Algeria
-
-**Jim Woodcock**  
-University of York, United Kingdom
+Authors and affiliations are withheld for double-anonymous review.
 
 ---
 
@@ -350,9 +344,6 @@ Finished MIS_Cover (0:00:33 elapsed time, ...)
 
 The exact timings depend on your machine; a full build of the `MIS_Cover` session takes roughly **35 seconds** on a laptop-class machine with Isabelle2025-2.
 
-<img width="1366" height="768" alt="run" src="https://github.com/user-attachments/assets/6be816dc-7e2b-44f6-9cfc-4f1bfbd99406" />
-
-
 ## Step 3 — Build without cleaning (incremental)
 
 If you have already built the session once and have only changed one theory, you can omit `-c` to reuse existing heap images:
@@ -417,15 +408,7 @@ These results provide a formal foundation for asynchronous and distributed exact
 
 # Contribution Statement
 
-This work was carried out through close collaboration.
-
-- **Zine El Abidine Bouneb** developed the original PCIR (Parallel Coloring Iterative Refinement) algorithm, the configuration-state model, and the underlying graph coloring methodology.
-
-- **Jim Woodcock** supervised the formal methods aspect of the work, proposed presenting the algorithm as a configuration-state semantics, guided the mathematical structure of the correctness proofs, and introduced the use of Isabelle/HOL for the verification.
-
-- The complete Isabelle/HOL formalization contained in this repository was developed by **Zine El Abidine Bouneb** under the supervision of **Jim Woodcock**, with AI assistance as described in the next section.
-
-Both authors contributed substantially to the resulting research and share responsibility for the scientific contribution presented in the accompanying paper.
+Author contributions are withheld for double-anonymous review and will be stated in the camera-ready version. The formalization was developed by the authors with AI assistance as described in the next section.
 
 ---
 
@@ -449,11 +432,13 @@ The authors specified the mathematical content and the results to be proved, rev
 
 # Citation
 
-If you use this repository, please cite
+If you use this repository, please cite the accompanying paper
 
-> Zine El Abidine Bouneb and Jim Woodcock,
+> Anonymous Author(s),
 > **A Configuration-State Semantics for MIS-Cover Graph Coloring**,
-> 2026.
+> under double-anonymous review.
+
+(The full citation will be added after the review process.)
 
 ---
 
